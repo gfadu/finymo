@@ -1,0 +1,31 @@
+import 'package:flutter/material.dart';
+
+class SignUp extends StatefulWidget {
+  @override
+  _SignUpState createState() => _SignUpState();
+}
+
+class _SignUpState extends State<SignUp> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Color(0xA2F5FF7CEFB5),
+      body: Stack(
+        children: <Widget>[
+          Container(
+            child: Container(
+              width: MediaQuery.of(context).size.width,
+              height: MediaQuery.of(context).size.height*0.6,
+              decoration: BoxDecoration(
+                  color: Color(0xA5E4D56DD9EE).withOpacity(0.8),
+                  borderRadius: BorderRadius.only(
+                        bottomLeft: const Radius.circular(250)
+                  )
+              )
+            ),
+          )
+        ],
+      ),
+    );
+  }
+}
