@@ -33,8 +33,8 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    Timer(Duration(seconds: 5),(){
-        Navigator.of(context).push(
+    Future.delayed(Duration(seconds: 5),(){
+        Navigator.pushReplacement(context,
           MaterialPageRoute(
             builder: (context)=> LoginPage()
           )
