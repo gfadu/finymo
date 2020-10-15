@@ -1,24 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:finymo/size_config.dart';
 
 class Info extends StatelessWidget {
   const Info({
-    Key key,
-    @required this.defaultSize, this.name, this.email, this.image,
+    Key key, this.name, this.email, this.image,
   }) : super(key: key);
-
-  final double defaultSize;
   final String name, email, image;
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: defaultSize * 24,
+      height: SizeConfig.defaultSize * 24,
       child: Stack(
         children: <Widget>[
           ClipPath(
             clipper: CustomShape(),
             child: Container(
-              height: defaultSize * 15,
+              height: SizeConfig.defaultSize * 15,
               color: Color(0x6DEEE5A5BCE4),
             ),
           ),
@@ -27,35 +25,32 @@ class Info extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.end,
               children: <Widget>[
                 Container(
-                  height: defaultSize * 14,
-                  width: defaultSize * 14,
+                  height: SizeConfig.defaultSize * 14,
+                  width: SizeConfig.defaultSize * 14,
                   decoration: BoxDecoration(
                       shape: BoxShape.circle,
                       border: Border.all(
                         color: Color(0xA2F5FF7CEFB5),
-                        width: defaultSize*0.4,
+                        width: SizeConfig.defaultSize * 0.4,
                       ),
                       image: DecorationImage(
                         image: AssetImage(image),
-                      )
-                  ),
+                      )),
                 ),
                 Text(
                   name,
                   style: TextStyle(
-                    fontSize: defaultSize * 2.2,
+                    fontSize: SizeConfig.defaultSize * 2.2,
                     color: Colors.white,
                   ),
                 ),
                 SizedBox(
-                  height: defaultSize / 2,
+                  height: SizeConfig.defaultSize / 2,
                 ),
                 Text(
                   email,
                   style: TextStyle(
-                      fontWeight: FontWeight.w400,
-                      color: Colors.white
-                  ),
+                      fontWeight: FontWeight.w400, color: Colors.white),
                 )
               ],
             ),
