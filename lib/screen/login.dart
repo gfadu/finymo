@@ -1,6 +1,8 @@
 import 'package:finymo/screen/signup.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:finymo/screen/Home.dart';
+import 'register.dart';
 
 
 class LoginPage extends StatefulWidget {
@@ -246,11 +248,7 @@ class _LoginState extends State<LoginPage> {
                             ),
                             TextSpan(
                                 text: 'Sign Up',
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 18.0,
-                                    fontWeight: FontWeight.bold
-                                )
+                                style: getStyle(context: context)
                             )
                           ]
                       ),
@@ -266,3 +264,9 @@ class _LoginState extends State<LoginPage> {
   }
 }
 
+//TextStyle(
+//getStyle
+//color: Colors.white,
+//fontWeight: FontWeight.bold,
+//fontSize: getStyle(context: context)
+//)

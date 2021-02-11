@@ -3,8 +3,9 @@ import 'dart:async';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:finymo/screen/login.dart';
-import 'package:finymo/utils/constants.dart';
+import 'package:finymo/components/body.dart';
 import 'package:flutter/painting.dart';
+
 
 
 
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: SplashScreen()
+      home: LoginPage()
     );
   }
 }
